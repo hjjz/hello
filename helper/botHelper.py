@@ -43,7 +43,7 @@ async def search_user_in_community(bot, update):
         await bot.get_chat_member('@MafiaGiveawaysChat', update.chat.id)
         await bot.get_chat_member('@MafiaGiveawaysChat', update.chat.id)
     except UserNotParticipant:
-        await update.reply_text(BotMessage.not_joined_community, parse_mode = 'html',reply_markup=InlineKeyboardMarkup([
+        await update.reply_text(BotMessage.not_joined_community,reply_markup=InlineKeyboardMarkup([
         [InlineKeyboardButton('Join our Channel.',url = 'https://t.me/MafiaGiveawaysChat')],
         [InlineKeyboardButton('Join our Group.',url = 'https://t.me/MafiaGiveawaysChat')]
         ]))
